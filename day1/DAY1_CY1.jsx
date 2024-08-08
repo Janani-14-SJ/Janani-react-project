@@ -1,15 +1,15 @@
 import React from "react";
 function Compare()
 {
-    const name1="Kabil";
-    const name2="Kabil";
-    const object1={name:"Kabil"};
-   const object2={name:"Kabil"};
+    const name1="Janani";
+    const name2="Janani";
+    const object1={name:"Janani"};
+   const object2={name:"Janani"};
    alert(object1===object2);
    alert(name1===name2);
    alert(object1===name1);
 }
-const Harish = ()=>{
+const Sha = ()=>{
     return (
         <div>
             <h1>Let we see the output of javascript</h1>
@@ -17,4 +17,4 @@ const Harish = ()=>{
         </div>
     );
 };
-export default Harish;
+export default Sha;
