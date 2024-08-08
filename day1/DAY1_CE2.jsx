@@ -13,7 +13,7 @@ function alertMsg()
     alert("Check the console output!");
 
 }
-const Keerthi=()=>{
+const JANU=()=>{
     return(
         <div>
             <h1>Reference Data Types use same memory</h1>
@@ -21,4 +21,4 @@ const Keerthi=()=>{
         </div>
     );
 };
-export default Keerthi;
+export default JANU;
