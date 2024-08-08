@@ -2,7 +2,7 @@ import React from "react";
 function AlertMsg()
 {
     let age=18;
-    let name="Kiran";
+    let name="Nan";
     let setStatus =false;
     let userDefault=undefined;
     let responseValue=null;
