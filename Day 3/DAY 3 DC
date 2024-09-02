@@ -1,0 +1,54 @@
+import React, { useState } from 'react';
+
+const TaskManager = () => {
+  // Initial task list state
+  const [tasks, setTasks] = useState([
+    { id: 1, text: 'Learn React', completed: false },
+    { id: 2, text: 'Write Code', completed: false },
+    { id: 3, text: 'Read a Book', completed: false }
+  ]);
+
+  // Function to toggle the completion status of a task
+  const toggleTaskCompletion = (id) => {
+    setTasks(tasks.map(task => 
+      task.id === id ? { ...task, completed: !task.completed } : task
+    ));
+  };
+
+  // Function to delete a task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>Task List</h1>
+
+      {/* Display the tasks */}
+      <ul style={{ listStyle: 'none', padding: 0 }}>
+        {tasks.map(task => (
+          <li 
+            key={task.id} 
+            style={{ 
+              textDecoration: task.completed ? 'line-through' : 'none', 
+              margin: '10px 0',
+              cursor: 'pointer' 
+            }}
+          >
+            <span onClick={() => toggleTaskCompletion(task.id)}>
+              {task.text}
+            </span>
+            <button 
+              onClick={() => deleteTask(task.id)} 
+              style={{ marginLeft: '20px', padding: '5px 10px' }}
+            >
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TaskManager;

@@ -1,0 +1,29 @@
+import React from 'react';
+
+const App = () => {
+  const compare = () => {
+    // Primitive data types comparison
+    const name1 = "Kabil";
+    const name2 = "Kabil";
+    
+    // Reference data types comparison
+    const object1 = { name: "Kabil" };
+    const object2 = { name: "Kabil" };
+
+    // Comparison using === operator
+    console.log('Primitive comparison (name1 === name2):', name1 === name2); // true
+    console.log('Reference comparison (object1 === object2):', object1 === object2); // false
+
+    // Additional comparison (comparing objects using JSON.stringify)
+    console.log('Reference comparison (JSON.stringify(object1) === JSON.stringify(object2)):', JSON.stringify(object1) === JSON.stringify(object2)); // true
+  };
+
+  return (
+    <div>
+      <h1>Challenge Yourself Lab 1</h1>
+      <button onClick={compare}>Compare Data Types</button>
+    </div>
+  );
+};
+
+export default App;
